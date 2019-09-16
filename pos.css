@@ -1,66 +1,88 @@
-*{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html, body{
-	height: 200%;
-	width:  100%;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 100%;
-
+html, body {
+  height: 200%;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
 }
 
-h1{
-	margin: 1rem 0;
+h1 {
+  margin: 1rem 0;
 }
 
-section{
-	background: lightgrey;
-	border-bottom: 1px solid #000;
-	min-height: 600px;
-	margin-top: 2rem;
-	outline: 1px solid red;
-
-
+section {
+  background: lightgrey;
+  border-bottom: 1px solid #000;
+  height: 600px;
+  margin-top: 2rem;
+  outline: 1px solid red;
+  position: relative;
 }
 
-.wrapper{
-	max-width: 600px;
-	margin: auto;
-	outline: 1px solid blue;
-
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+  outline: 1px solid blue;
 }
 
-.row{
-	width: 100%;
-	height: 600px;
-
-
+.row {
+  width: 100%;
+  height: 50%;
+  background: yellow;
+  position: relative;
+  top: 300px;
 }
 
-.col{
-	width: 200px;
-	height: 200px;
+.col {
+  width: 200px;
+  height: 200px;
 }
 
-.electric-purple{
-	background: #C200FB;
-
+.row .electric-purple {
+  background: #C200FB;
+  position: absolute;
+  bottom: 0;
+  left:  0;
+  z-index: 4;
+	transition: 5s linear;
 }
 
-.raspberry{
-	background: #EC0868;
-	}
-
-.ferrari-red{
-	background: #FC2F00;
+.raspberry {
+  background: #EC0868;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
-.black{
-	background: #000;
+.ferrari-red {
+  background: #FC2F00;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  margin: 2rem;
 }
 
-.blabla{
-	background: #fff;
-	padding: .5rem;
+.black {
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.blabla {
+  background: #fff;
+  padding: .5rem;
+}
+
+.row:hover .electric-purple {
+  left: 400px;
+	background: green;
+	border-radius: 50%;
+	transform: scale(0.5);
 }
